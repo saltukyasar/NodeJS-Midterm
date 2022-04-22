@@ -1,7 +1,9 @@
 const express = require('express');
 const path = require('path');
 
-
+//const testJson = require('./utils/test_json')
+//const testText = require('./utils/test_text')
+//const testHtml = require('./utils/test_html')
 const geocode = require('./utils/test_geocode')
 const forecast = require('./utils/test_weather')
 
@@ -51,12 +53,15 @@ app.get('/test_forecast', (req, res) => {
     })
 })
 
- app.get('', (req,res)=>{
-     jsonTest(
-         res.send(data)
-     )
+ app.get('/test_json', (req,res)=>{
+    test_json()
  })
-
+ app.get('/test_text', (req,res)=>{
+    
+})
+app.get('/test_html', (req,res)=>{
+    
+})
 
 
 
