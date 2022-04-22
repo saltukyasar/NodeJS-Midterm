@@ -5,9 +5,8 @@ const forecast = (enlem, boylam, callback) => {
     const URL = 'http://api.weatherstack.com/current?access_key='+API_KEY+'&query=' + enlem + ',' + boylam + '&units=m';
     request({ url : URL, json: true}, (err, res, body) => {
         if(err){
-            callback('The service is down', undefined);
+            callback('sunucu calismiyor', undefined);
         }
-        // console.log(body.current)
         callback(undefined, body.current)
     })
 }
