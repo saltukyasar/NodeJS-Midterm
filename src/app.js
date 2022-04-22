@@ -1,12 +1,17 @@
 const express = require('express');
 const path = require('path');
 
+const homepage = __dirname 'public/index.html'
 
 
 const app = express();
 
 app.get('/', (req,res)=>{
-    res.send('public/index.html');
+    res.send(homepage);
+})
+
+app.get('/geocode' , (req,res)=>{
+    res.send()
 })
 
 
